@@ -1,5 +1,9 @@
 #!/bin/bash
 echo "Start installer"
+
+wget https://raw.githubusercontent.com/karl-automatenservice/public-releases/main/karl_desktop_client.sh
+./karl_desktop_client
+
 apt update
 apt install snapd
 snap install core
