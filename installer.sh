@@ -21,3 +21,4 @@ ngrok service start
 snap install openjdk
 export PATH="/snap/openjdk/current/jdk/bin"
 source ~/.profile
+
