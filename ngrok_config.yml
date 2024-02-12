@@ -1,0 +1,7 @@
+authtoken: 2c7v3Du24Db8Ku9uYsIXMb4kAqk_FxDXg915xhg7tCJST4Di
+tunnels:
+  ssh-access:
+    addr: 22
+    proto: tcp
+version: "2"
+region: eu
