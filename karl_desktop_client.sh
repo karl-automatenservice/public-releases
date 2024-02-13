@@ -1,10 +1,16 @@
 #!/bin/bash
+
+$version=1.0-SNAPSHOT
+$name=karl-desktop-client-linux-x64-$version.jar
+
 mkdir ~/karl-desktop-client
 cd ~/karl-desktop-client
-wget https://github.com/karl-automatenservice/public-releases/releases/download/1.0-SNAPSHOT/karl-desktop-client-linux-x64-1.0-SNAPSHOT.jar
-cp karl-desktop-client-linux-x64-1.0-SNAPSHOT.jar karl-desktop-client.jar
+rm -f name
+wget https://github.com/karl-automatenservice/public-releases/releases/download/$version/$name
+cp $name karl-desktop-client.jar
 
-echo "java -jar karl-desktop-client.jar" > start.sh
+echo "export MESA_EXTENSION_OVERRIDE=\"-GL_ARB_invalidate_subdata\"" > start.sh
+echo "/snap/openjdk/current/jdk/bin/java -jar karl-desktop-client.jar" >> start.sh
 ./start.sh
 
 
