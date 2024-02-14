@@ -22,5 +22,8 @@ source ~/.profile
 ngrok service install --config ngrok_config.yml
 ngrok service start
 
-wget https://raw.githubusercontent.com/karl-automatenservice/public-releases/main/karl_desktop_client.sh
-./karl_desktop_client
+mkdir -p ~/karl-display-client
+cd ~/karl-display-client
+wget https://raw.githubusercontent.com/karl-automatenservice/public-releases/main/karl_display_client.sh
+sudo chmod +x karl_display_client.sh
+./karl_display_client.sh
